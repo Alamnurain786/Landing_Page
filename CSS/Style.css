@@ -1,0 +1,802 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e6e6e3;
+}
+
+.service {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 16px 112px 16px 112px;
+    gap: 8px;
+
+}
+
+/* Navbar items ----------------------------*/
+.nav .logo {
+    width: 10px;
+}
+
+
+.nav .service_name ul,
+.nav .btn ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav .service_name ul li a,
+.nav .btn ul li a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #60677F;
+    transition: all .3s ease-in-out;
+
+}
+
+.nav .service_name ul li:hover>a {
+    color: blue;
+}
+
+
+.nav .service .btn ul li:first-child a {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 100px;
+    padding: 10px 24px 10px 24px;
+}
+
+
+
+.nav .btn ul li:last-child a {
+    position: relative;
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 100px;
+    Padding: 10px 24px 10px 42px;
+    gap: 10px;
+}
+
+.nav .service .btn ul li:hover a {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    transition: all .3s ease-in-out;
+}
+
+.nav .service .btn ul li span {
+    position: absolute;
+    top: 3px;
+    right: 136px;
+    color: blue;
+    font-size: 2em;
+}
+
+.nav .service .btn ul li:hover span {
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.filterapply {
+    display: none;
+}
+
+.threedot {
+    display: none;
+}
+
+
+
+/* Dropdown styles ----------------------------*/
+.service .service_name ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.service .service_name ul li ul {
+    position: absolute;
+    display: none;
+    left: 50%;
+    height: auto;
+    min-width: 160px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, 0%);
+    z-index: 999;
+}
+
+.service .service_name ul li:hover ul {
+    display: block;
+    list-style: none;
+}
+
+.service .service_name ul li ul li {
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+}
+
+/* Main section degin */
+section .section .main_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 420px;
+    background-image: url(../Image/Main_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section .section .main_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section .main_img .content_text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.main-container {
+    position: relative;
+    background: #FFFFFF;
+}
+
+section .section .box {
+    width: 1216px;
+    height: 184px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    margin: auto;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+.search-section input {
+    position: relative;
+    width: 1016px;
+    height: 56px;
+    padding: 0 60px;
+    border-radius: 100px;
+    border: 1px solid;
+    margin-right: 10px;
+}
+
+#search_btn {
+    width: 131px;
+    height: 56px;
+    padding: 10px 24px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for search button */
+#search_btn:hover {
+    background-color: blue;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.fa-search {
+    position: absolute;
+    left: 50px;
+    top: 27%;
+    transform: translateY(-50%);
+    color: #60677F;
+    font-size: 1.5em;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.filter_box select {
+    width: 191px;
+    height: 48px;
+    padding: 12px 0;
+    border-radius: 8px;
+    border: 1px solid;
+    margin-right: 8px;
+}
+
+/* for sorting filter options */
+
+.result {
+    position: absolute;
+    top: 570px;
+    left: 160px;
+}
+
+.result_box {
+    display: flex;
+    justify-content: space-between;
+    width: 1165px;
+    margin-bottom: 20px;
+}
+
+.view_type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view_type select {
+    width: 140px;
+    height: 40px;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 1px solid;
+    color: #2C2F3A;
+    cursor: pointer;
+}
+
+.result_data h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #60677F;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.result_data h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2C2F3A;
+}
+
+
+main .main section .result hr {
+    border: none;
+    border-top: 1px solid #60677F;
+}
+
+/*  Main Content */
+main .content-main {
+    width: 1216px;
+    height: 1232px;
+    position: relative;
+    margin: 236px 0px 0px 150px;
+    display: grid;
+}
+
+.main_text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.university_list {
+    width: 384px;
+    height: 284px;
+    padding: 16px 0px 32px 0px;
+    border-radius: 12px;
+    border: 1px solid #D1D3DC;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.university_list:hover {
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); */
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.university_name {
+    width: 384px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.university_list hr {
+    border: none;
+    border-top: 1px solid #D1D3DC;
+    width: 100%;
+}
+
+.university_name .details {
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.university_name .details .university_img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1px solid #D1D3DC;
+    display: flex;
+    justify-content: center;
+}
+
+.university_list .course_details {
+    width: 384px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.university_name .details .uni_info h2 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2C2F3A;
+}
+
+.university_name .details .uni_info span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #60677F;
+}
+
+.university_name .details .uni_info span i {
+    color: red;
+}
+
+.university_name .heart {
+    padding-right: 20px;
+}
+
+.heart i:hover {
+    color: red;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+
+.university_list .course_details .course {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.university_list .course_details .course h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #60677F;
+}
+
+.university_list .course_details .course p {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.university_list .course_details .fee-main {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.university_list .course_details .fee-main .fee h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #60677F;
+}
+
+.university_list .course_details .fee-main .fee p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.university_list .course_details .fee-main .duration h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #60677F;
+}
+
+.university_list .course_details .fee-main .duration p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+
+/* page section */
+.page-section {
+    width: 1216px;
+    height: 32px;
+    margin: 50px 0px 0px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.page-section .text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2C2F3A;
+
+}
+
+.page .page_number {
+    display: flex;
+    gap: 25px;
+}
+
+.page a {
+    color: #2C2F3A;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.page a:nth-child(2) {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+
+.page a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+
+/* For footer design */
+footer {
+    width: 100%;
+    height: 392px;
+    /* position: fixed; */
+    bottom: 0;
+    color: #D1D3DC;
+    background-color: #061447;
+}
+
+
+.content-footer {
+    width: 100%;
+    height: 326px;
+    display: flex;
+    padding: 64px 45px;
+    justify-content: space-around;
+}
+
+.content-footer .footer_logo {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+
+.content-footer .footer_logo p {
+    line-height: 24px;
+}
+
+.quicklink ul,
+.legal ul,
+.getapp ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.quicklink li,
+.legal li,
+.getapp li {
+    margin-bottom: 10px;
+}
+
+
+.quicklink a,
+.legal a,
+.getapp a {
+    color: #D1D3DC;
+    text-decoration: none;
+}
+
+.quicklink a:hover,
+.legal a:hover,
+.getapp a:hover {
+    color: blue;
+    transition: all .3s ease-in-out;
+}
+
+
+footer .footer hr {
+    width: 85%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #D1D3DC;
+    border: none;
+
+}
+
+
+.footer .footer_social {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 110px;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.footer_social .footer_social_1 a {
+    color: #D1D3DC;
+    text-decoration: none;
+}
+
+.footer_social .footer_social_1,
+.footer_social .footer_social_2 {
+    display: flex;
+    gap: 24px;
+}
+
+.footer_social_2 img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* Media query for responsive design */
+
+/* Responsive styles for mobile devices */
+
+@media screen and (max-width: 900px) {
+
+    .service .service_name,
+    .service .btn {
+        display: none;
+    }
+
+    header .nav .service {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        margin-left: -100px;
+    }
+
+    .threedot {
+        display: block;
+        margin-right: -70px;
+    }
+
+
+    .section .main_img .content_text {
+        text-align: left;
+        margin: 0 50px;
+    }
+
+    section .section .box {
+        width: 320px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #fff;
+        margin: auto;
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    section .section .box .search-section input {
+        width: 296px;
+        height: 48px;
+        padding: 0 40px;
+        border-radius: 100px;
+        border: 1px solid;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .fa-search {
+        position: absolute;
+        left: 20px;
+        top: 28%;
+        transform: translateY(-50%);
+        color: #60677F;
+        font-size: 1.5em
+    }
+
+    .filterapply {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .filterapply i {
+        color: #333;
+    }
+
+    .filterapply:hover {
+        background-color: #e0e0e0;
+    }
+
+    .search-section #search_btn {
+        display: none;
+    }
+
+    .filter-section {
+        display: none;
+    }
+
+    .result hr {
+        display: none;
+    }
+
+
+    .result_box .view_type {
+        display: none;
+    }
+
+    .result_box {
+        display: flex;
+        justify-content: space-between;
+        width: 0px;
+        margin-left: -120px;
+    }
+
+    .result_data h4,
+    .result_data h1 {
+        width: 250px;
+    }
+
+
+
+    .content-main .main_text {
+        /* Arrange the university list vertically */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    main .content-main {
+        width: 0;
+        height: 1232px;
+        position: relative;
+        margin: 226px 0px 0px 30px;
+        display: grid;
+    }
+
+    .main_text div:nth-child(n+5) {
+        display: none;
+    }
+
+    .page-section {
+        width: 0;
+        margin: 34px 0px 0px 54px;
+        display: flex;
+        padding-bottom: 90px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .page-section .text p {
+        width: 228px;
+    }
+
+    /*for footer */
+    footer {
+        width: 100%;
+        height: 661px;
+        /* position: fixed; */
+        bottom: 0;
+        color: #D1D3DC;
+        background-color: #061447;
+    }
+
+    .content-footer {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        padding: 45px 45px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .content-footer .footer_logo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 35px;
+        padding-bottom: 50px;
+    }
+
+    .footer .footer_social {
+        width: 100%;
+        height: 123px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 6px 31px;
+        /* flex-wrap: wrap; */
+        /* align-content: stretch; */
+        flex-direction: column-reverse;
+        /* gap: 11px; */
+    }
+}
